@@ -27,3 +27,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 https://icons.getbootstrap.com/
+
+## Native Federation
+
+This template is prepared for Native Federation with Angular builder applications.
+
+- Federation runtime initialization is in `src/main.ts`.
+- Angular bootstrap has been moved to `src/bootstrap.ts`.
+- Federation defaults are in `federation.config.js`.
+
+After installing dependencies, you can run:
+
+- `npm run start:mf` to start the app in development mode.
+- `npm run build:mf` to build with production configuration.
