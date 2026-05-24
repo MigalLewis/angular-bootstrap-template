@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-bootstrap-firebase-template:build:production"
+              "buildTarget": "angular-bootstrap-firebase-template:build:production"
             },
             "development": {
-              "browserTarget": "angular-bootstrap-firebase-template:build:development"
+              "buildTarget": "angular-bootstrap-firebase-template:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,14 +86,16 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-bootstrap-firebase-template:build"
+            "buildTarget": "angular-bootstrap-firebase-template:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
@@ -109,6 +111,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angular-bootstrap-firebase-template"
+  }
 }
